@@ -24,7 +24,15 @@ It does **not** change anything by itself. Nothing is installed, nothing runs, a
 
 ### 2. Put the scripts in place
 
-Open Terminal and run:
+The scripts have to live in your **home directory**, inside a hidden folder called `.local`, inside a folder called `bin`:
+
+```
+/Users/YOUR-USERNAME/.local/bin/
+```
+
+(`~/.local/bin/` is the same thing — the `~` means "your home folder". This is the standard place macOS looks for per-user command-line tools, so it's there ready for these scripts.)
+
+Open Terminal and run (it creates that folder for you if it doesn't exist yet):
 
 ```sh
 mkdir -p ~/.local/bin
@@ -34,6 +42,8 @@ chmod +x ~/.local/bin/sort_*.sh
 ```
 
 (Use the actual version folder name, e.g. `file-sorter-v1.0.1`.)
+
+To see them afterwards in Finder: it's a hidden folder, so use **Terminal** (`ls ~/.local/bin/`) or press **Cmd + Shift + .** inside your home folder to reveal hidden files.
 
 ### 3. Create the two LaunchAgents
 
