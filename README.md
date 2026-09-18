@@ -16,13 +16,23 @@ It does **not** change anything by itself. Nothing is installed, nothing runs, a
 
 ## How to use it
 
+> **Fastest way (one command):** open Terminal and paste the line below. It downloads the release, unzips the two sort scripts **straight into `~/.local/bin/`**, makes them executable, and tidies up. Then skip to step 3.
+>
+> ```sh
+> mkdir -p ~/.local/bin && curl -L -o /tmp/file-sorter.zip https://github.com/DinoLL288/file-sorter/releases/download/v1.0.2/file-sorter-v1.0.2.zip && unzip -jo /tmp/file-sorter.zip -d ~/.local/bin "*/sort_*.sh" && chmod +x ~/.local/bin/sort_*.sh && rm /tmp/file-sorter.zip
+> ```
+
 ### 1. Download and unzip
+
+*(Skip this step if you used the one-command install above.)*
 
 1. On the **releases** page (https://github.com/DinoLL288/file-sorter/releases), click **file-sorter-vX.Y.Z.zip**.
 2. If asked, confirm the Download button that appears (for a private repo, you must be the only visitor anyway — there's no extra login).
 3. Double-click the downloaded `file-sorter-vX.Y.Z.zip` to unzip it.
 
 ### 2. Put the scripts in place
+
+*(Skip this step if you used the one-command install above.)*
 
 The scripts have to live in your **home directory**, inside a hidden folder called `.local`, inside a folder called `bin`:
 
